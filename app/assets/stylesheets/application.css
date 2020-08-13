@@ -33,4 +33,5 @@
    width: 90%;
    height: 90%;
    border-radius: 40px;
+   box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
  }

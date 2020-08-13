@@ -1,0 +1,9 @@
+<div class="margin-40 ideas_container">
+  <%= link_to 'Add a great idea', new_idea_path %>
+
+  <% @ideas.each do |idea| %>
+    <div class="idea_card">
+      <h2><%= idea.name %></h2>
+    </div>
+  <% end %>
+</div>

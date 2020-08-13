@@ -1,0 +1,10 @@
+<div class="margin-40">
+  <%= form_for @idea do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    <%= f.submit %>
+  <% end %>
+</div>
+
