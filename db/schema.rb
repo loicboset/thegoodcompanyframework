@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_111054) do
+ActiveRecord::Schema.define(version: 2020_08_16_135724) do
+
+  create_table "concepts", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.text "question_1"
+    t.text "question_2"
+    t.text "question_3"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "project_concepts", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "concept_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["concept_id"], name: "index_project_concepts_on_concept_id"
+    t.index ["project_id"], name: "index_project_concepts_on_project_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,4 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_16_111054) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "project_concepts", "concepts"
+  add_foreign_key "project_concepts", "projects"
+  add_foreign_key "projects", "users"
 end
