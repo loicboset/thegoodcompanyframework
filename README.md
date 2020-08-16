@@ -12,9 +12,12 @@ With The Good Company Framework, you just have to enter the name of your project
 ## Contributing
 
 You are more then welcome to help on this project, by any means! (ideas, code, feedback, ...)
+
 Just contact me!
 
 ## Roadmap
+
+### First Milestone
 
 - [ ] Basic interface
   - [x] Log in system
