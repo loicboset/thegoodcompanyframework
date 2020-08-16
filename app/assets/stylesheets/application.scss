@@ -11,3 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1, h2, h3 { font-size: 1.4em; }
+p, a, li { font-size: 1em; }
+li {list-style: none;}

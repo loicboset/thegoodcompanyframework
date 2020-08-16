@@ -1,12 +1,32 @@
-.navbar-lewagon {
+.navbar-custom {
   justify-content: space-between;
   background: white;
+  flex-wrap: nowrap;
+  h1 {
+    font-size: 18px;
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-custom .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-custom .navbar-brand img {
   width: 40px;
+}
+
+#navbar-btn {
+  margin: 0;
+  padding: 0;
+}
+
+#navbar-drop-menu {
+  right: 0;
+  left: auto;
+}
+
+// OVERRIDING BOOTSTRAP FA ICON IN NAVBAR BTN
+
+.dropdown-toggle::after {
+  content: none;
 }
