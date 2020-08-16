@@ -14,3 +14,28 @@
   padding: 10px;
   text-align: center;
 }
+
+.project_container {
+  margin: 20px auto;
+  p {
+    margin-top: 10px;
+  }
+}
+
+.project_title {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    flex-grow: 1;
+  }
+
+  i {
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.3);
+    margin: 0 5px;
+  }
+}

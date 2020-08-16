@@ -15,6 +15,22 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user_id = current_user.id
     @project.save
+    redirect_to project_path(@project)
+  end
+
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project = Project.update(project_params)
+    redirect_to project_path(@project)
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
     redirect_to projects_path
   end
 

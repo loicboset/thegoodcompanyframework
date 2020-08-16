@@ -7,9 +7,9 @@
   <div class="project_cards__container">
 
     <% @projects.each do |project| %>
-      <div class="project_card">
+      <%= link_to project_path(project), class: "project_card" do %>
         <p><%= project.name %></p>
-      </div>
+      <% end %>
     <% end %>
 
 
