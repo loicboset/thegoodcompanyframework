@@ -1,6 +1,19 @@
 <div class="container">
 
   <%# CREATE A NEW PROJECT %>
-  <%= link_to "Add a project idea", new_project_path %>
+  <%= link_to "Add a project idea", new_project_path, class: "button add-project" %>
+
+  <%# DISPLAY PROJECT CARDS %>
+  <div class="project_cards__container">
+
+    <% @projects.each do |project| %>
+      <div class="project_card">
+        <p><%= project.name %></p>
+      </div>
+    <% end %>
+
+
+  </div>
+
 
 </div>
