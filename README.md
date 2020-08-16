@@ -21,7 +21,8 @@ Just contact me!
 
 - [ ] Basic interface
   - [x] Log in system
-  - [ ] CRUD actions
+  - [ ] CRUD actions for project ideas
+  - [ ] Desktop + mobile responsiveness
   - [ ] Heroku hosting
 
 - [ ] Basic concepts added
